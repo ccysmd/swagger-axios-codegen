@@ -282,3 +282,7 @@ export function getValidationModel(propName: string, prop: IDefinitionProperty, 
   }
   return hasValidationRules ? validationModel : null
 }
+
+export function formatName(name: string): string {
+  return name.trim();
+}

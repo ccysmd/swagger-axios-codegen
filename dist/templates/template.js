@@ -47,7 +47,7 @@ function classTemplate(name, props, imports, strictNullChecks = true, useClassTr
     return `
   ${importString}
 
-  export class ${name} {
+  export class ${(0, utils_1.formatName)(name)} {
 
     ${props
         .map(p => {
@@ -189,7 +189,7 @@ function serviceTemplate(name, body, imports = null) {
     return `
 
   ${mappedImports}
-  export class ${name} {
+  export class ${(0, utils_1.formatName)(name)} {
     ${body}
   }
   `;

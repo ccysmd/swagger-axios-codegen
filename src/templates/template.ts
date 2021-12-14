@@ -1,6 +1,6 @@
 import camelcase from 'camelcase'
 import { IPropDef, ISwaggerOptions } from '../baseInterfaces'
-import { toBaseType, isDefinedGenericTypes, getDefinedGenericTypes } from '../utils'
+import { toBaseType, isDefinedGenericTypes, getDefinedGenericTypes, formatName } from '../utils'
 
 const baseTypes = ['string', 'number', 'object', 'boolean', 'any']
 const isAdditionalProperties = (x: string) => x === "[additionalProperties: string]"
@@ -64,7 +64,7 @@ export function classTemplate(
   return `
   ${importString}
 
-  export class ${name} {
+  export class ${formatName(name)} {
 
     ${props
       .map(p =>
@@ -253,7 +253,7 @@ export function serviceTemplate(name: string, body: string, imports: string[] = 
   return `
 
   ${mappedImports}
-  export class ${name} {
+  export class ${formatName(name)} {
     ${body}
   }
   `

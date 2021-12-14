@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getValidationModel = exports.isOpenApi3 = exports.findDeepRefs = exports.classNamesToGenerics = exports.genericsToClassNames = exports.trimString = exports.getMethodName = exports.toBaseType = exports.isBaseType = exports.RemoveSpecialCharacters = exports.refClassName = exports.getGenericsClassNames = exports.getDefinedGenericTypes = exports.setDefinedGenericTypes = exports.isDefinedGenericTypes = exports.isGenerics = exports.isOpenApiGenerics = void 0;
+exports.formatName = exports.getValidationModel = exports.isOpenApi3 = exports.findDeepRefs = exports.classNamesToGenerics = exports.genericsToClassNames = exports.trimString = exports.getMethodName = exports.toBaseType = exports.isBaseType = exports.RemoveSpecialCharacters = exports.refClassName = exports.getGenericsClassNames = exports.getDefinedGenericTypes = exports.setDefinedGenericTypes = exports.isDefinedGenericTypes = exports.isGenerics = exports.isOpenApiGenerics = void 0;
 let definedGenericTypes = [];
 const UniversalGenericTypes = ['IList', 'List'];
 const AbpGenericTypes = ['IListResult', 'ListResultDto', 'IPagedResult', 'PagedResultDto', 'Dictionary', 'IDictionary'];
@@ -274,4 +274,8 @@ function getValidationModel(propName, prop, required) {
     return hasValidationRules ? validationModel : null;
 }
 exports.getValidationModel = getValidationModel;
+function formatName(name) {
+    return name.trim();
+}
+exports.formatName = formatName;
 //# sourceMappingURL=utils.js.map

@@ -34,3 +34,4 @@ export declare function classNamesToGenerics(classNames: string[]): string;
 export declare function findDeepRefs(imports: string[], allDefinition: IDefinitionClass[], allEnums: IDefinitionEnum[], currentImports?: string[]): string[];
 export declare function isOpenApi3(version: string): boolean;
 export declare function getValidationModel(propName: string, prop: IDefinitionProperty, required: string[]): any;
+export declare function formatName(name: string): string;
