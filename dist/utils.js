@@ -275,7 +275,8 @@ function getValidationModel(propName, prop, required) {
 }
 exports.getValidationModel = getValidationModel;
 function formatName(name) {
-    return name.trim();
+    const reg = /\s/;
+    return name.replaceAll(reg, '');
 }
 exports.formatName = formatName;
 //# sourceMappingURL=utils.js.map
