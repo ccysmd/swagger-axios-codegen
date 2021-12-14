@@ -275,7 +275,7 @@ function getValidationModel(propName, prop, required) {
 }
 exports.getValidationModel = getValidationModel;
 function formatName(name) {
-    const reg = /\s/;
+    const reg = /\s*/g;
     return name.replaceAll(reg, '');
 }
 exports.formatName = formatName;
