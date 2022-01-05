@@ -284,6 +284,5 @@ export function getValidationModel(propName: string, prop: IDefinitionProperty, 
 }
 
 export function formatName(name: string): string {
-  const reg = /\s*/g
-  return name.replace(reg, '');
+  return name.replace(/[-\s]/g, '_')
 }
