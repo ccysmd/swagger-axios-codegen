@@ -98,7 +98,7 @@ function requestHeader() {
   export function axios(configs: IRequestConfig, resolve: (p: any) => void, reject: (p: any) => void): Promise<any> {
     if (serviceOptions.axios) {
       return serviceOptions.axios.request(configs).then(res => {
-        resolve(res?.data || null);
+        resolve(res?.data || res);
       })
         .catch(err => {
           reject(err);
