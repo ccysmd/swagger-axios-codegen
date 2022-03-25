@@ -8,7 +8,7 @@ export function serviceHeader(options: ISwaggerOptions) {
   const classTransformerImport = options.useClassTransformer
     ? `import { Expose, Transform, Type, plainToClass } from 'class-transformer';
   ` : '';
-  return `/** Generate by swagger-axios-codegen */
+  return `/** Generate by swagger-axios-codegen1 */
   /* eslint-disable */
   // @ts-nocheck
   import axiosStatic, { AxiosInstance, AxiosRequestConfig } from 'axios';
